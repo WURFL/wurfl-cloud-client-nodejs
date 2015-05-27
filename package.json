@@ -1,0 +1,25 @@
+{
+  "name": "wurflcloud",
+  "version": "1.0.2",
+  "description": "ScientiaMobile WURFL Cloud Client for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WURFL/wurfl-cloud-client-nodejs.git"
+  },
+  "keywords": [
+    "WURFL",
+    "device",
+    "detection",
+    "cloud"
+  ],
+  "author": "ScientiaMobile <support@scientiamobile.com>",
+  "license": "MIT, GPL v2",
+  "bugs": {
+    "url": "https://github.com/WURFL/wurfl-cloud-client-nodejs/issues"
+  },
+  "homepage": "https://github.com/WURFL/wurfl-cloud-client-nodejs"
+}
