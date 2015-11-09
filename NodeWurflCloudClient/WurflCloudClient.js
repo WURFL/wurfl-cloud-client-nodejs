@@ -152,8 +152,13 @@ WurflCloudClient.prototype = {
 
 	//adding the appropriate HTTP Headers to the request
 	    this.http_request_options['X-Cloud-Client'] = 'WurflCloudClient/NodeJS_'+this.client_version;
-	    var ip = this.http_request.connection.remoteAddress;
-	    var fwd = null;
+	    //var ip = this.http_request.connection.remoteAddress;
+	    //This is the right way to get the ip address if your behind the a proxy server
+	    //So if your facing any problems on heroku this is the way to do it.
+	    var ip = this.http_request.headers['x-forwarded-for'];
+	    
+	    //No need for fwd
+	    /*var fwd = null;
 	    if (typeof this.http_request.headers['x-forwarded-for'] != 'undefined') {
 		fwd = this.http_request.headers['x-forwarded-for'];
 	    }
@@ -162,7 +167,9 @@ WurflCloudClient.prototype = {
 		this.http_request_options['X-Forwarded-For'] = ip.toString() +',' +fwd.toString();
 	    }else{
 		this.http_request_options['X-Forwarded-For'] = ip;
-	    }
+	    }*/
+	    
+	    this.http_request_options['X-Forwarded-For'] = ip;
 	    
 	    if (typeof this.http_request.headers['accept'] != 'undefined'){
 		this.http_request_options['X-Accept'] = this.http_request.headers['accept'];
