@@ -176,6 +176,10 @@ WurflCloudClient.prototype = {
             if (typeof this.http_request.headers["accept"] != "undefined") {
                 this.http_request_options["X-Accept"] = this.http_request.headers["accept"];
             }
+
+            if (typeof this.http_request.header["accept-encoding"] != "undefined") {
+                this.http_request_options["X-Accept-Encoding"] = this.http_request.headers["accept-encoding"];
+            }
             
             //Add the original request headers to this request
             for (var i in this.include_headers) {
