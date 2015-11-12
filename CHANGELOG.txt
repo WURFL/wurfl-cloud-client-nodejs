@@ -1,3 +1,6 @@
+1.0.3
+    - Pass `Accept-Encoding` header to the WURFL Cloud as `X-Accept-Encoding`
+
 1.0.2
     - Open source release.
 

@@ -1,6 +1,6 @@
 {
   "name": "wurflcloud",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ScientiaMobile WURFL Cloud Client for Node.js",
   "main": "index.js",
   "scripts": {

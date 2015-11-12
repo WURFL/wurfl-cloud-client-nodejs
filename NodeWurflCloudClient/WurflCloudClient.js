@@ -28,7 +28,7 @@ var WurflCloudClient = function(config, user_request, user_response, type_of_cac
     this.request_path = null;
     this.json = null;
     this.report_data = [];
-    this.client_version = "1.0.2";
+    this.client_version = "1.0.3";
     this.api_version = null;
     this.api_username = null;
     this.api_password = null;
@@ -67,7 +67,7 @@ WurflCloudClient.prototype = {
     request_path: null,
     json: null,
     report_data: [],
-    client_version: "1.0.2",
+    client_version: "1.0.3",
     api_version: null,
     api_username: null,
     api_password: null,
