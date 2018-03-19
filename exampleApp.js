@@ -63,7 +63,7 @@ function favicon(response) {
 
 function example(response, request) {
 
-    var brand, is_wireless;
+    var my_complete_device_name, is_wireless;
     var result_capabilities = {};
     //Please be sure to  substitute the following api_key with your own.
     var api_key = "XXXXXX:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY";
@@ -74,7 +74,7 @@ function example(response, request) {
     response.setHeader("Content-Type", "text/html");
     WurflCloudClientObject.detectDevice(request, null, function(err, result_capabilities){
         console.log("All capabilities available:" + JSON.stringify(result_capabilities));
-        WurflCloudClientObject.getDeviceCapability('brand_name', function(error, brand){
+        WurflCloudClientObject.getDeviceCapability('complete_device_name', function(error, my_complete_device_name){
             if(error!=null){
                 response.write("<br>Error: " + error + " <br/>");
                 response.end();
@@ -84,7 +84,7 @@ function example(response, request) {
                     response.write("<br>Error: " + error + " <br/>");
                 }else{
                     response.write("<br>"+ 'Is Wireless Device: ' + is_wireless + " <br/>");
-                    response.write("<br>"+ 'Brand Name: ' + brand + " <br/>");
+                    response.write("<br>"+ 'Complete Device Name: ' + my_complete_device_name + " <br/>");
                 }
                 response.end();
             });
@@ -113,7 +113,7 @@ function example2(response, request) {
         if(err!=null){
             response.write("<br>Error: " + err + " <br/>");
         }else{
-            response.write("<br>"+ 'Brand Name: ' + result_capabilities['brand_name'] + " <br/>");
+            response.write("<br>"+ 'Complete Device Name: ' + result_capabilities['my_complete_device_name'] + " <br/>");
             response.write("<br>"+ 'Is Wireless Device: ' + result_capabilities['is_wireless_device'] + " <br/>");
         }
         response.end();
