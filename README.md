@@ -45,22 +45,22 @@ Set your API Key:
 ### Example
 After you have installed and configured the WURFL Client, create example.js:
 
-	var brand;
+	var my_complete_device_name;
 	var result_capabilities = {};
 	var WURFLCloudClientObject = new wurfl_cloud_client.WurflCloudClient(configuration, HttpRequest, HttpResponse);
 	WURFLCloudClientObject.detectDevice(HttpRequest, null, function(err, result_capabilities){
-		WURFLCloudClientObject.getDeviceCapability('brand_name', function(error, brand){
+		WURFLCloudClientObject.getDeviceCapability('complete_device_name', function(error, my_complete_device_name){
 			if(error!=null){
 				console.log('Error' + error);
 			}else{
-				console.log('Brand name: ' + brand);
+				console.log('Complete Device Name: ' + my_complete_device_name);
 			}
 		});
 	});				
 
-You should see the brand name of your device in the console provided
+You should see the complete device name of your device in the console provided
 that you have already obtained a WURFL Cloud API key and that you have
-selected `brand_name` in your capabilities section.
+selected `complete_device_name` in your capabilities section.
 
 
 ### Example application
@@ -69,12 +69,12 @@ to run the example application on you browser do the following:
 
 * Download and extract all the files in a folder.
 * Inside the `exampleApp.js` enter your own WURFL Cloud api key.
-* Select `brand_name` and `is_wireless_device` as your capabilities in ScientiaMobile WURFL Cloud website.
+* Select `complete_device_name` and `is_wireless_device` as your capabilities in ScientiaMobile WURFL Cloud website.
 * Run the `server/example` application inside a console with `node index.js`.
 * Go to a Web Browser in `http://localhost:8888`
 * Either chose `example` or `example2`.
 
-You will see the brand name of your device and whether it is wireless or not.
+You will see the complete device name of your device and whether it is wireless or not.
 
 
 **2015 ScientiaMobile Incorporated**
